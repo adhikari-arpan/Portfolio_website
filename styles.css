@@ -330,7 +330,6 @@ nav ul li a:hover {
 
 /*Sections*/
 section {
-  /* background-color: rgb(155, 167, 0); */
   padding: 20px;
   margin-bottom: 20px;
   opacity: 0;
@@ -406,6 +405,12 @@ section.reveal {
 }
 
 /*Skill and Education*/
+#skills-education {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .MySkillTopic{
     font-size: 48px; 
     color: white; 
@@ -416,11 +421,17 @@ section.reveal {
 
 .skill{
   width:500px;
+  
   margin:60px auto;
   color:white;
   padding:20px;
   box-shadow:0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
 }
+
+.education{
+  flex: 1;
+}
+
 .skill li {
       margin: 20px ;
       padding: 10px;
@@ -435,8 +446,8 @@ section.reveal {
   background: #353b48;
   width: 100%;
   display: block;
-  height: 10px;
-  border: 2px solid rgba(0,0,0,.3);
+  height: 4px;
+  border: px solid rgba(0,0,0,.3);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,.25) 0 1px 2px rgba(0,0,0,.25);
@@ -449,7 +460,8 @@ section.reveal {
 .bar span {
     height: 10px;
     float: left;
-    background: linear-gradient(135deg,rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+    /* background: linear-gradient(135deg,rgba(236,0,140,1)0%, rgba(252,103,103,1)100%); */
+    background-image: linear-gradient(45deg, #ff0000, #ffb700);
 }
 
 .html{
@@ -528,7 +540,7 @@ section.reveal {
 }
 
 .project,
-.participation {
+.participation{
   position: relative;
 }
 
@@ -556,6 +568,113 @@ section.reveal {
 .project:hover .project-overlay,
 .participation:hover .participation-overlay {
   display: block;
+}
+
+/*Contact Me*/
+#contact-me{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: linear-gradient(45deg, #330808, #3a2c09);
+  border-radius: 2.5em;
+  padding: 30px;
+  width: 600px;
+  height: 350px;
+}
+
+.form::before {
+  content: '';
+  /* background-image: linear-gradient(45deg, #ff0000, #ffb700); */
+  height: 358px;
+  width: 309px;
+  position: absolute;
+  margin-top: -34px;
+  margin-left: px;
+  z-index: -1;
+  border-radius: 2.7em;
+}
+
+.button {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  background: #ff5900;
+  color: black;
+  padding: 0.7em 5.5em;
+  display: flex;
+  align-items: center;
+  border: 2px solid #66da4300;
+  border-radius: 5em;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid #ff5900;
+  background: #00000000;
+  color: #ff5900;
+}
+
+.button:active {
+  border: 2px solid #66da4300;
+  background: #ff5900;
+  color: black;
+}
+
+.input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  outline: none;
+  background-color: transparent;
+  color: #ff5900;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  background-color: transparent;
+  color: white;
+}
+
+.input::placeholder {
+  color: #9b725b;
+}
+
+.textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  width: calc(100% - 10px);
+  padding: 8px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  outline: none;
+  background-color: transparent;
+  color: #ff5900;
+}
+
+.textarea::placeholder {
+  color: #9b725b;
+}
+
+.textarea:focus {
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  background-color: transparent;
+  color: white;
 }
 
 /* Back To Top Button Code */
@@ -622,4 +741,172 @@ footer {
   padding: 10px;
   text-align: center;
   color: #fff;
+}
+
+/*For smaller screen*/
+@media (max-width: 600px) {
+
+  #myLogo {
+    order: -2;
+  }
+
+  .image-section{
+    order: 1;
+  }
+
+nav {
+    width: 100%;
+  }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f1f1f1;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none; 
+    background-color: #000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+  /* Home Section */
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+  }
+
+  .typing-animation {
+    font-size: 16px;
+  }
+
+  #myLogo {
+    top: 0px; /* Adjust top position */
+    left: -350px; /* Adjust left position */
+  }
+
+  #myLogo img {
+    max-width: 20%; /* Adjust size */
+  }
+
+  .image-section img {
+    top: -150px; /* Adjust top position */
+    left: 50px; /* Adjust left position */
+    max-width: 130%; /* Adjust size */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #download-cv, #Hirebutton {
+    width: 44%;
+    padding: 10px;
+  }
+
+  .Hirebutton {
+    padding: 0.5rem 0.5rem; /* Reduce padding for smaller size */
+    font-size: 0.1rem; /* Adjust font size */
+    justify-content: flex-start; /* Align to the left */
+  }
+
+  .Hirebutton .dots_border {
+    --size_border: calc(100% + 1px);
+  }
+
+  .socialContainer {
+    width: 30px; /* Reduce width */
+    height: 40px; /* Reduce height */
+    border-radius: 10px 0 10px 0; /* Adjust border radius if needed */
+  }
+
+  .socialSvg {
+    width: 14px; /* Adjust icon size */
+  }
+
+  .card {
+    gap: 7px; /* Reduce gap between icons */
+  }
+
+  /* About Me Section */
+  .aboutmecard {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .aboutmecard .img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Skills Section */
+  .skill {
+    width: 90%;
+  }
+
+  /* Contact Me Section */
+  .form {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .input, .textarea {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+  }
 }

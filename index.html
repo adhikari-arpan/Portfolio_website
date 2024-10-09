@@ -12,13 +12,14 @@
   </head>
   <body>
     <header>
+      <div class="hamburger">&#9776;</div>
       <nav>
         <ul>
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#skills-education">Skills & Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#participations">Participations</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <!-- <li><a href="#projects">Projects</a></li> -->
+          <!-- <li><a href="#participations">Participations</a></li> -->
+          <!-- <li><a href="#experience">Experience</a></li> -->
           <li><a href="#contact-me">Contact Me</a></li>
         </ul>
       </nav>
@@ -185,8 +186,8 @@
       <br />
       <br />
 
+      <h1 class="MySkillTopic">Explore my Skills and Education</h1>
       <section id="skills-education">
-        <h1 class="MySkillTopic">Explore my Skills</h1>
         <div class="skill">
           <li>
             <h3>HTML</h3>
@@ -213,16 +214,25 @@
             <p>80%</p>
             <span class="bar"><span class="cpp"></span></span>
           </li>
+          <br />
+          <div class="education">
+            <h1><b>My Education</b></h1>
+            <h2>Nepal College of Information Technology</h2>
+            <h3>Bachelor in Computer Engineering</h3>
+            <h3>Third Semester (Current) </h3>
+        </div>
         </div>
       </section>
 
 
       
-      <section id="experience">
+      <!-- <section id="experience">
         <h2>Experience</h2>
-        <p>Details about your experience will go here.</p>
-      </section>
-      <section id="participations">
+        <p>Details about my experience</p>
+      </section> -->
+
+
+      <!-- <section id="participations">
         <h2>Participations</h2>
         <div class="participation-grid">
           <div class="participation">
@@ -240,33 +250,25 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="contact-me">
-        <h2>Contact Me</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      </section> -->
 
-    <!-- Form Inputs. Each input must have a name="" attribute -->
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-    <textarea name="message" required></textarea>
-
-    <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-    <button type="submit">Submit Form</button>
-
-      </form>
-      </section>
+      <h1 class="MySkillTopic">Contact Me</h1>
+  <section id="contact-me">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="form">
+        <input type="hidden" name="access_key" value="b6ea0709-475d-4add-97dd-850391093b44">
+        <input class="input" type="text" name="name" placeholder=" Name" required>
+        <input class="input" type="email" name="email" placeholder="Email Id" required>
+        <textarea class="textarea" name="message" placeholder="Enter message" required></textarea>
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <button class="button" type="submit">Submit</button>
+    </form>
+  </section>
     </main>
+
     <footer>
       <p>© 2024 Arpan Adhikari. All rights reserved.</p>
     </footer>
-    
+
     <a href="#" id="back-to-top">Back to Top</a>
     <script src="script.js"></script>
   </body>
