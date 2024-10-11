@@ -35,14 +35,25 @@ document.getElementById('download-cv').addEventListener('click', function() {
     document.getElementById('pdfLink').click();
 });
 
-//Hire Me Button
-// function scrollToContact() {
-//     document.getElementById('contact-me').scrollIntoView({ behavior: 'smooth' });
-//   }  
-
 // Back to top button
-document.getElementById('back-to-top').addEventListener('click', function() {
-    window.scrollTo(0, 0);
+document.addEventListener("DOMContentLoaded", function() {
+      const topBtn = document.getElementById("TopBtn");
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 300) { // Show button after scrolling 300px
+          topBtn.style.display = "flex";
+        } else {
+          topBtn.style.display = "none";
+        }
+      });
+
+      topBtn.addEventListener("click", function() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
 });
 
 //Form Submission
@@ -69,7 +80,7 @@ document.getElementById('back-to-top').addEventListener('click', function() {
         });
     });
 
-// Fade in animation to sections
+//Fade in animation to sections
 document.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(function(section) {
@@ -78,6 +89,27 @@ document.addEventListener('scroll', function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+
+    const observerOptions = {
+      threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
 
 //Nav Bar for Mobile Screen
 document.addEventListener('DOMContentLoaded', function() {

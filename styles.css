@@ -1,9 +1,11 @@
-body {
+html, body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   background: linear-gradient(to right, #001574 5%, #000 70%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
@@ -17,9 +19,12 @@ header {
 }
 
 #myLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   top: -300px;
-  left: -85px;
+  right: 20px;
 }
 
 #myLogo img {
@@ -29,11 +34,14 @@ header {
 
 /*Arpan Photo*/
 .image-section img {
-  position: relative;
   top: 15px;
   max-width: 105%;
   height: auto;
-  left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 10px;
 }
 
 nav ul {
@@ -677,62 +685,58 @@ section.reveal {
   color: white;
 }
 
-/* Back To Top Button Code */
-#back-to-top {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgb(20, 20, 20);
-  border: none;
-  font-weight: 600;
+/*Back to Top Button Code*/
+#TopBtn {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#44ea76, #39fad7);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-  cursor: pointer;
-  transition-duration: 0.3s;
-  overflow: hidden;
-  position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  border: none;
 }
 
-#svgIcon {
-  width: 12px;
-  transition-duration: 0.3s;
-}
-
-#svgIcon path {
+.arrow path {
   fill: white;
 }
 
-#back-to-top:hover {
-  width: 140px;
-  border-radius: 50px;
-  transition-duration: 0.3s;
-  background-color: rgb(181, 160, 255);
-  align-items: center;
-}
-
-#back-to-top:hover #svgIcon {
-  transition-duration: 0.3s;
-  transform: translateY(-200%);
-}
-
-#back-to-top::before {
+.topText {
+  font-size: 0.9em;
+  width: 100px;
   position: absolute;
-  bottom: -20px;
-  content: "Back to Top";
   color: white;
-  font-size: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
 }
 
-#back-to-top:hover::before {
-  font-size: 13px;
+#TopBtn:hover .topText {
   opacity: 1;
-  bottom: unset;
-  transition-duration: 0.3s;
+  transition-duration: .7s;
+}
+
+#TopBtn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Footer Code */
@@ -744,57 +748,37 @@ footer {
 }
 
 /*For smaller screen*/
+@media (max-width: 300px){
+.image-section img {
+  display: flex;
+  top: -90px; 
+  right: 50px; 
+  max-width: 170%; 
+}
+}
+
 @media (max-width: 600px) {
 
   #myLogo {
     order: -2;
   }
 
-  .image-section{
+  .image-section {
     order: 1;
   }
 
-nav {
+  nav {
     width: 100%;
   }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #f1f1f1;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #fff;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-@media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column; /* Ensure it takes full width */
     align-items: center;
     display: none; 
     background-color: #000;
@@ -808,10 +792,26 @@ nav ul li a:hover {
     margin: 10px 0;
   }
 
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #f1f1f1;
+  }
+
   .hamburger {
     display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    position: fixed; /* Changed to fixed */
+    top: 20px;
+    right: 20px;
   }
-}
 
   /* Home Section */
   .home-section {
