@@ -73,9 +73,8 @@
               ></a>
               <button
                 class="Hirebutton"
-                id="Hirebutton"
-                onclick="window.location.href='mailto:adhikariarpan2063@gmail.com?subject=Job%20Opportunity&body=Dear%20Arpan,%0D%0A%0D%0AWe%20are%20interested%20in%20discussing%20a%20job%20opportunity%20with%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]'"
-              >
+                id="Hirebutton"              
+                >
                 <div class="dots_border"></div>
                 <span class="hire_text_button">HIRE ME</span>
               </button>
@@ -88,6 +87,7 @@
             <div class="card">
               <a
                 class="socialContainer containerOne"
+                id="instagramButton"
                 href="https://www.instagram.com/adhikari__arpan/"
                 target="_blank"
               >
@@ -99,6 +99,7 @@
               </a>
               <a
                 class="socialContainer containerTwo"
+                id="twitterButton"
                 href="https://x.com/adhikari__arpan"
                 target="_blank"
               >
@@ -117,6 +118,7 @@
               </a>
               <a
                 class="socialContainer containerThree"
+                id="linkedinButton"
                 href="https://www.linkedin.com/in/adhikari-arpan63/"
                 target="_blank"
               >
@@ -129,6 +131,7 @@
 
               <a
                 class="socialContainer containerFour"
+                id="githubButton"
                 href="https://github.com/adhikari-arpan"
                 target="_blank"
               >
@@ -219,18 +222,15 @@
             <h1><b>My Education</b></h1>
             <h2>Nepal College of Information Technology</h2>
             <h3>Bachelor in Computer Engineering</h3>
-            <h3>Third Semester (Current) </h3>
-        </div>
+            <h3>Third Semester (Current)</h3>
+          </div>
         </div>
       </section>
 
-
-      
       <!-- <section id="experience">
         <h2>Experience</h2>
         <p>Details about my experience</p>
       </section> -->
-
 
       <!-- <section id="participations">
         <h2>Participations</h2>
@@ -253,20 +253,55 @@
       </section> -->
 
       <h1 class="MySkillTopic">Contact Me</h1>
-  <section id="contact-me">
-      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="form">
-        <input type="hidden" name="access_key" value="b6ea0709-475d-4add-97dd-850391093b44">
-        <input class="input" type="text" name="name" placeholder=" Name" required>
-        <input class="input" type="email" name="email" placeholder="Email Id" required>
-        <textarea class="textarea" name="message" placeholder="Enter message" required></textarea>
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-        <button class="button" type="submit">Submit</button>
-    </form>
-  </section>
+      <section id="contact-me">
+        <form
+          id="contactForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="b6ea0709-475d-4add-97dd-850391093b44"
+          />
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder=" Name"
+            required
+          />
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="Your Contact (Email Id)"
+            required
+          />
+          <textarea
+            class="textarea"
+            name="message"
+            placeholder="Enter message"
+            required
+          ></textarea>
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </section>
     </main>
     <button id="TopBtn">
-      <svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
-    <p class="topText">Back to Top</p>
+      <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+        ></path>
+      </svg>
+      <p class="topText">Back to Top</p>
     </button>
     <footer>
       <p>© 2024 Arpan Adhikari. All rights reserved.</p>
