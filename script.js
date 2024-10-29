@@ -28,7 +28,23 @@ let letter = '';
     } else {
         setTimeout(type, 100);
     }
-})();  
+})(); 
+
+//Smooth Scroll
+//Smooth Scroll
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+});
 
 // Download CV button
 document.getElementById('download-cv').addEventListener('click', function() {
@@ -42,52 +58,6 @@ document.getElementById('Hirebutton').addEventListener('click', function() {
 
 document.getElementById('Hirebutton').addEventListener('touchstart', function() {
   window.location.href = 'mailto:adhikariarpan2063@gmail.com?subject=Job%20Opportunity&body=Dear%20Arpan,%0D%0A%0D%0AWe%20are%20interested%20in%20discussing%20a%20job%20opportunity%20with%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]';
-});
-
-
-//Social Media Links
-// Function to handle the button click
-function handleSocialButtonClick(event, url) {
-  event.preventDefault();
-  setTimeout(() => {
-    window.open(url, '_blank'); // Open the URL in a new tab
-}, 100);
-}
-
-// Add event listeners for Instagram button
-const instagramButton = document.getElementById('instagramButton');
-instagramButton.addEventListener('click', function(event) {
-  handleSocialButtonClick(event, 'https://www.instagram.com/adhikari__arpan/');
-});
-instagramButton.addEventListener('touchstart', function(event) {
-  handleSocialButtonClick(event, 'https://www.instagram.com/adhikari__arpan/');
-});
-
-// Add event listeners for Twitter button
-const twitterButton = document.getElementById('twitterButton');
-twitterButton.addEventListener('click', function(event) {
-  handleSocialButtonClick(event, 'https://x.com/adhikari__arpan');
-});
-twitterButton.addEventListener('touchstart', function(event) {
-  handleSocialButtonClick(event, 'https://x.com/adhikari__arpan');
-});
-
-// Add event listeners for LinkedIn button
-const linkedinButton = document.getElementById('linkedinButton');
-linkedinButton.addEventListener('click', function(event) {
-  handleSocialButtonClick(event, 'https://www.linkedin.com/in/adhikari-arpan63/');
-});
-linkedinButton.addEventListener('touchstart', function(event) {
-  handleSocialButtonClick(event, 'https://www.linkedin.com/in/adhikari-arpan63/');
-});
-
-// Add event listeners for GitHub button
-const githubButton = document.getElementById('githubButton');
-githubButton.addEventListener('click', function(event) {
-  handleSocialButtonClick(event, 'https://github.com/adhikari-arpan');
-});
-githubButton.addEventListener('touchstart', function(event) {
-  handleSocialButtonClick(event, 'https://github.com/adhikari-arpan');
 });
 
 // Back to top button
