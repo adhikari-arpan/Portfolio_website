@@ -834,6 +834,7 @@ footer {
 /* Skills & Education Section Styles */
 #skills-education-modern {
   padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: white;
 }
 
@@ -903,6 +904,26 @@ footer {
   font-size: 30px;
   font-weight: bold;
   color: white;
+  transition: all 0.3s ease;
+}
+
+.modern-skill-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+  transition: all 0.3s ease;
+}
+
+.modern-skill-item:hover .modern-skill-icon {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+}
+
+.modern-skill-item:hover .modern-skill-icon img {
+  filter: brightness(1.3) contrast(1.2)
+    drop-shadow(0 2px 8px rgba(0, 212, 255, 0.4));
+  transform: scale(1.05);
 }
 
 .modern-skill-name {
@@ -936,23 +957,23 @@ footer {
   background: linear-gradient(135deg, #3776ab, #4b8bbe);
 }
 .react-lang {
-  background: linear-gradient(135deg, #61dafb, #21d4fd);
+  background: linear-gradient(135deg, #006581, #21d4fd);
   color: #000;
 }
 .nodejs-lang {
-  background: linear-gradient(135deg, #339933, #68cc68);
+  background: linear-gradient(135deg, #008e00, #009500);
 }
 .mongodb-lang {
-  background: linear-gradient(135deg, #47a248, #4db33d);
+  background: linear-gradient(135deg, #003201, #29c211);
 }
 .php-lang {
   background: linear-gradient(135deg, #777bb4, #8892bf);
 }
 .mysql-lang {
-  background: linear-gradient(135deg, #4479a1, #00758f);
+  background: linear-gradient(135deg, #58b7ff, #009ec2);
 }
 .git-lang {
-  background: linear-gradient(135deg, #f05032, #f14e32);
+  background: linear-gradient(135deg, #bd1c00, #4a0b00);
 }
 .unity-lang {
   background: linear-gradient(135deg, #000000, #444444);
@@ -1047,5 +1068,10 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 24px;
+  }
+
+  .modern-skill-icon img {
+    width: 30px;
+    height: 30px;
   }
 }
