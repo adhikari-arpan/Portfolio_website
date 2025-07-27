@@ -464,7 +464,7 @@ section.reveal {
 
 .button {
   margin-top: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 17px;
   background: linear-gradient(45deg, #00d4ff, #0099cc);
   color: white;
@@ -503,7 +503,7 @@ section.reveal {
   outline: none;
   background-color: rgba(255, 255, 255, 0.03);
   color: #00d4ff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
   border-radius: 8px 8px 0 0;
 }
@@ -521,7 +521,7 @@ section.reveal {
 }
 
 .textarea {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: calc(100% - 10px);
   padding: 12px;
   height: 100px;
@@ -597,7 +597,7 @@ section.reveal {
   color: white;
   margin: 0;
   font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   opacity: 0;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -631,12 +631,12 @@ section.reveal {
     width: 50px;
     height: 50px;
   }
-  
+
   #TopBtn .arrow {
     width: 20px;
     height: 20px;
   }
-  
+
   #TopBtn .topText {
     font-size: 7px;
   }
